@@ -1,0 +1,85 @@
+MePlatformTriggerTypeEnum
+
+//全部
+ALL(0,"全部"),
+//交易---原转账、质押
+TRADE(1,"交易"),
+//奖励
+REWARDS(2,"奖励"),
+//安全
+SECURE(3,"安全"),
+//其他--原ME_ID、社区、转移节点？
+OTHER(4,"其他"),
+//站内信
+IN_MAIL(5,"站内信")
+
+
+
+
+MePlatformTriggerEnum
+
+--转账
+NFT_SEND_SUCCESS(63, "NFT发送成功"),
+NFT_RECEIVE_SUCCESS(64, "NFT接收成功"),
+--跨链
+CROSS_LINE_SEND_SUCCESS(65, "跨链发送成功"),
+CROSS_LINE_RECEIVE_SUCCESS(66, "跨链接收成功"),
+--安全
+SECURE_UPT_PHONE_SUCCESS(67, "安全性修改手机-成功"),
+SECURE_UPT_EMAIL_SUCCESS(68, "安全性修改邮箱-成功"),
+--其他
+KYC_NORMAL_AUTH_NOT_PASSED(69, "普通认证不通过"),
+KYC_NORMAL_AUTH_PASSED(70, "普通认证通过"),
+
+
+
+MessageTemplateEnum
+
+--转账
+NFT_SEND_SUCCESS(FALSE),
+NFT_RECEIVE_SUCCESS(FALSE),
+--跨链
+CROSS_LINE_SEND_SUCCESS(FALSE),
+CROSS_LINE_RECEIVE_SUCCESS(FALSE),
+--安全
+SECURE_UPT_PHONE_SUCCESS(FALSE),
+SECURE_UPT_EMAIL_SUCCESS(FALSE),
+--其他
+KYC_NORMAL_AUTH_NOT_PASSED(FALSE),
+KYC_NORMAL_AUTH_PASSED(FALSE)
+
+
+base  MessageTemplateEnum
+/**
+ *灵活期限质押本金到账
+ **/
+DELEGATE_WITHDRAW(false),
+/**
+ *立即修改-修改手机
+ **/
+UPT_PHONE_SUCCESS(false),
+/**
+ *立即修改-修改邮箱
+ **/
+UPT_EMAIL_SUCCESS(false),
+
+
+
+common MePlatformTriggerEnum
+DELEGATE_WITHDRAW(71, "灵活期限质押本金到账"),
+UPT_PHONE_SUCCESS(72, "立即修改-修改手机"),
+UPT_EMAIL_SUCCESS(73, "立即修改-修改邮箱");
+
+base  MessageTemplateEnum
+/**
+ *安全项修改手机失败
+ **/
+SECURE_UPT_PHONE_ERROR(false),
+/**
+ *安全项修改邮箱失败
+ **/
+SECURE_UPT_EMAIL_ERROR(false),
+
+common MePlatformTriggerEnum
+SECURE_UPT_PHONE_ERROR(74, "安全项修改手机-失败"),
+SECURE_UPT_EMAIL_ERROR(75, "安全项修改邮箱-失败"),
